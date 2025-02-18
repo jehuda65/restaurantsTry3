@@ -83,6 +83,7 @@ export default function Index() {
         <Form
           id="search-form"
           onChange={(event) => {
+            event.preventDefault();
             const isFirstSearch = q === null;
             submit(event.currentTarget, {
               replace: !isFirstSearch,
